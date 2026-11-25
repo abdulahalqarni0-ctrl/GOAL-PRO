@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#081426">
+  <meta name="description" content="GOAL PRO — نتائج وإحصائيات كرة القدم حول العالم">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <title>GOAL PRO | عالم كرة القدم</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">G<span>+</span></div>
+        <div><div class="brand">GOAL <b>PRO</b></div><div class="tagline">عالم كرة القدم بين يديك</div></div>
+      </div>
+      <button class="icon-btn" id="installBtn" aria-label="تثبيت التطبيق" title="إضافة للشاشة الرئيسية"><span>＋</span></button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><i class="pulse"></i> مركز كرة القدم العالمي</span>
+          <h1>كل مباراة،<br><em>كل لحظة.</em></h1>
+          <p>تابع النتائج والإحصائيات والبطولات من مكان واحد.</p>
+          <div class="hero-actions">
+            <button class="primary-btn" data-go="matches">تابع المباريات <span>←</span></button>
+            <span class="live-note">تجربة تفاعلية</span>
+          </div>
+        </div>
+        <div class="hero-ball" aria-hidden="true"><div class="ball">⚽</div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div></div>
+        <div class="hero-glow"></div>
+      </section>
+
+      <section class="quick-stats">
+        <div><strong id="matchCount">08</strong><span>مباريات في العرض</span></div>
+        <div><strong>🌍</strong><span>بطولات عالمية</span></div>
+        <div><strong>24/7</strong><span>متابعة على مدار الساعة</span></div>
+      </section>
+
+      <section class="section-head">
+        <div><span class="eyebrow muted">مركز النتائج</span><h2 id="pageTitle">المباريات</h2></div>
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="ابحث عن فريق أو بطولة"></label>
+      </section>
+
+      <nav class="filter-row" id="matchFilters" aria-label="تصفية المباريات">
+        <button class="chip active" data-filter="all">الكل</button>
+        <button class="chip" data-filter="live">مباشر <i class="tiny-live"></i></button>
+        <button class="chip" data-filter="finished">انتهت</button>
+        <button class="chip" data-filter="upcoming">قادمة</button>
+      </nav>
+
+      <section id="contentArea" class="content-area"></section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="التنقل الرئيسي">
+      <button class="nav-item selected" data-tab="matches"><span>⚽</span><small>المباريات</small></button>
+      <button class="nav-item" data-tab="leagues"><span>🏆</span><small>البطولات</small></button>
+      <button class="nav-item" data-tab="favorites"><span>☆</span><small>المفضلة</small></button>
+      <button class="nav-item" data-tab="news"><span>▤</span><small>الأخبار</small></button>
+    </nav>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
